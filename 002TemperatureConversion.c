@@ -3,7 +3,7 @@
    for fahr = 0, 20,...,300 */ 
 
 int main(){
-	int fahr, celsius;
+	float fahr, celsius;
 	int lower, upper, step;
 
 	lower = 0; 	//lower limit of temperature table
@@ -13,8 +13,13 @@ int main(){
 	fahr = lower;
 
 	while ( fahr <= upper ){
-		celsius = 5 * (fahr-32) / 9;
-		printf("%3d%6d\n",fahr, celsius);
+		celsius = 5.0 / 9.0 * (fahr-32);
+		/*
+		 * A decimal point in a constant indicates that it is floating point, 
+		 * however, so 5. 0/9 . 0 is not truncated because it is the ratio of 
+		 * two floating-point value
+		 */
+		printf("%3.0f %6.1f\n",fahr, celsius); 
 		fahr = fahr + step;
 	}
 
