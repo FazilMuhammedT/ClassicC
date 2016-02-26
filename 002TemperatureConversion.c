@@ -12,6 +12,8 @@ int main(){
 
 	fahr = lower;
 
+	printf("Fahrenheit - Celsius\n");
+
 	while ( fahr <= upper ){
 		celsius = 5.0 / 9.0 * (fahr-32);
 		/*
@@ -19,7 +21,7 @@ int main(){
 		 * however, so 5. 0/9 . 0 is not truncated because it is the ratio of 
 		 * two floating-point value
 		 */
-		printf("%3.0f %6.1f\n",fahr, celsius); 
+		printf("%6.0f %12.1f\n",fahr, celsius); 
 		fahr = fahr + step;
 	}
 
