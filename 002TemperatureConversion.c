@@ -24,6 +24,20 @@ int main(){
 		printf("%6.0f %12.1f\n",fahr, celsius); 
 		fahr = fahr + step;
 	}
+	
+	lower = 0; 	//lower limit of temperature table
+	upper = 100; 	//upper limit of temperature table
+	step = 4;	//step size
 
+	celsius = lower;
+
+	printf("Celsius - Fahrenheit\n");
+	while ( celsius <= upper ){
+		fahr = 9.0 / 5.0 * celsius + 32;
+		printf("%6.0f %12.1f\n",celsius, fahr); 
+		celsius = celsius + step;
+	}
+	
+	
 	return 0;
 }
