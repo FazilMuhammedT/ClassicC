@@ -29,6 +29,18 @@ int main(){
 	int stringLength = stringlength(sentence);
 	printf("Length of the string is %d\n",stringLength);
 	printf("Length of string calculated using string library method is %lu\n",strlen(sentence));
+	
+	enum boolean {NO, YES};
+	enum boolean flag = NO;
+	printf("Printing Enumeration constant value for boolean - NO is %d\n",flag);	
+	printf("Printing Enumeration constant value for boolean - YES is %d\n",YES);
+	
+	
+	typedef enum months { JAN = 1, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC } Months; /* FEBis2,MARis3,etc. */
+	enum months January = JAN;
+	Months June = JUN;
+	printf("Printing enumeration constants of enum months - January is %d, June is %d, December is %d\n", January, June, DEC);
+
 	return 0;
 }
 
