@@ -1,6 +1,7 @@
 /* Experimenting with Contants */
 
 #include <stdio.h>
+#include <string.h>
 
 int stringlength(char string[]);	//declaring the method strinlength
 
@@ -27,7 +28,7 @@ int main(){
 	printf("Printing string constant %s\n",sentence);
 	int stringLength = stringlength(sentence);
 	printf("Length of the string is %d\n",stringLength);
-	
+	printf("Length of string calculated using string library method is %lu\n",strlen(sentence));
 	return 0;
 }
 
