@@ -1,6 +1,9 @@
 /* Experimenting with Contants */
 
 #include <stdio.h>
+
+int stringlength(char string[]);	//declaring the method strinlength
+
 int main(){
 	
 	printf("Experimenting with constants\n");
@@ -22,6 +25,16 @@ int main(){
 
 	char sentence[] = "This is a string";		//A string constant is an array of characters. The internal representation of a string has a null character ' \0' at the end
 	printf("Printing string constant %s\n",sentence);
-
+	int stringLength = stringlength(sentence);
+	printf("Length of the string is %d\n",stringLength);
+	
 	return 0;
+}
+
+/* strlen: return the length of string */
+int stringlength(char string[]){
+        int length=0;
+	while(string[length] != '\0')
+		++length;
+	return length;
 }
