@@ -1,14 +1,14 @@
+/* 
+ * program to determine the ranges of char, short, int,
+ * and long variables, both signed and unsigned, 
+ * by printing appropriate values from standard headers and by direct computation. 
+ */
+
 #include <stdio.h>
 #include <limits.h>
 
 int main(){
 	
-	/* 
-	 * program to determine the ranges of char, short, int,
-	 * and long variables, both signed and unsigned, 
-	 * by printing appropriate values from standard headers and by direct computation. 
-	 */
-
 	printf("Determining the variable range using standard library limits.h\n");
 
 	printf("Size of char %d\n",CHAR_BIT);
@@ -31,24 +31,24 @@ int main(){
 
 	printf("Determining the variable range using direct computation\n");
 	
-    printf("Minimum Signed Char %d\n",-(char)((unsigned char) ~0 >> 1) - 1);
-    printf("Maximum Signed Char %d\n",(char) ((unsigned char) ~0 >> 1));
+	printf("Minimum Signed Char %d\n",-(char)((unsigned char) ~0 >> 1) - 1);
+	printf("Maximum Signed Char %d\n",(char) ((unsigned char) ~0 >> 1));
 
-    printf("Minimum Signed Short %d\n",-(short)((unsigned short)~0 >>1) -1);
-    printf("Maximum Signed Short %d\n",(short)((unsigned short)~0 >> 1));
+	printf("Minimum Signed Short %d\n",-(short)((unsigned short)~0 >>1) -1);
+	printf("Maximum Signed Short %d\n",(short)((unsigned short)~0 >> 1));
 
-    printf("Minimum Signed Int %d\n",-(int)((unsigned int)~0 >> 1) -1);
-    printf("Maximum Signed Int %d\n",(int)((unsigned int)~0 >> 1));
+	printf("Minimum Signed Int %d\n",-(int)((unsigned int)~0 >> 1) -1);
+	printf("Maximum Signed Int %d\n",(int)((unsigned int)~0 >> 1));
 
-    printf("Minimum Signed Long %ld\n",-(long)((unsigned long)~0 >>1) -1);
-    printf("Maximum signed Long %ld\n",(long)((unsigned long)~0 >> 1));
+	printf("Minimum Signed Long %ld\n",-(long)((unsigned long)~0 >>1) -1);
+	printf("Maximum signed Long %ld\n",(long)((unsigned long)~0 >> 1));
 
-    /* Unsigned Maximum Values */
+	/* Unsigned Maximum Values */
 
-    printf("Maximum Unsigned Char %d\n",(unsigned char)~0);
-    printf("Maximum Unsigned Short %d\n",(unsigned short)~0);
-    printf("Maximum Unsigned Int %u\n",(unsigned int)~0);
-    printf("Maximum Unsigned Long %lu\n",(unsigned long)~0);
+	printf("Maximum Unsigned Char %d\n",(unsigned char)~0);
+	printf("Maximum Unsigned Short %d\n",(unsigned short)~0);
+	printf("Maximum Unsigned Int %u\n",(unsigned int)~0);
+	printf("Maximum Unsigned Long %lu\n",(unsigned long)~0);
 
 	return 0;
 }

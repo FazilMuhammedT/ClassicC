@@ -1,7 +1,7 @@
-#include <stdio.h>
 /* Print Fahrenheit-Celsius Table
    for fahr = 0, 20,...,300 */ 
 
+#include <stdio.h>
 int main(){
 	float fahr, celsius;
 	int lower, upper, step;
