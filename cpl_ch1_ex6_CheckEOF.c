@@ -10,5 +10,6 @@ int main(int argc, char *argv[]){
 	}
 
 	printf("%d\n", c != EOF); 
+	printf("Print EOF value %d\n",EOF);
 	return 0;
 } 
