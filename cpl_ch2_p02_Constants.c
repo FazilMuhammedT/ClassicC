@@ -22,6 +22,15 @@ int main(){
 		printf("%c is %d\t",character,character);
 		character++;
 	}
+
+	printf("\nPrinting Bell, Vertical and A ");
+
+	char bellch = '\x7'; //sounds a bell
+	char vtabch = '\xb'; //prints vertical space
+	char aChar = '\x41'; //hex 41 = decimal 65 : ASCII code for 'A'
+
+	printf("%c%c%c", bellch, vtabch, aChar);
+	
 	printf("\n");
 
 	char sentence[] = "This is a string";		//A string constant is an array of characters. The internal representation of a string has a null character ' \0' at the end
