@@ -19,7 +19,7 @@ int main(){
 	printf("Printing character constant \n");	//The value of a character constant is the numeric value of the character in the machine's character set
 	int character = 33;
 	while(character<127){
-		printf("%c is %d\t",character,character);
+		printf("%c is %d - %x\t",character,character,character);
 		character++;
 	}
 
