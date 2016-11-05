@@ -14,8 +14,9 @@ int copy_array (int a[], int b[], int n){
  * into the array to[] starting at index toIndex
 **/
 int copy_array_2(int from[], int fromIndex, int to[], int toIndex, int n){
-	for(int i = fromIndex, j = toIndex; i < fromIndex + n; i++, j++)
-		to[j] = from[i];
+//	for(int i = fromIndex, j = toIndex; i < fromIndex + n; i++, j++)
+//		to[j] = from[i];
+	copy_array(from+fromIndex, to+toIndex, n);
 	return 0;
 } 
 
