@@ -23,6 +23,27 @@ int *incrementUsingHeap (int n) {
 	return ptr;
 }
 
+//Copy a string by passing it into heap
+char *duplicate (char *s){
+	int len=0; //to store length of s
+	char *t; //char to point to string in heap
+
+	//find the length of string
+	while(s[len] != '\0')
+		len++;
+	len++;//to make space for '\0' 
+
+	//Allocate memory in heap for t 
+	t = (char *) malloc(len * sizeof(char));
+	
+	//Copy the content of s to t
+	for(int i = 0; i < len; i++)
+		t[i] = s[i];
+	t[len] = '\0'; //assigining the last character to null value
+
+	return t;
+}
+
 int main(){
 	int *p = increment(1); 
 	printf("Integer value after incrementing 1 - %d\n",*p);
@@ -33,6 +54,13 @@ int main(){
 	// Forget to free memory after use called a memory leak
 	free(p);
 	p = 0;
+
+	char str[] = "hello world";
+	char *copyStr;
+
+	copyStr = duplicate(str);
+	printf("String from heap -> %s\n",copyStr);
+	free(copyStr);
 
 	return 0;
 }
