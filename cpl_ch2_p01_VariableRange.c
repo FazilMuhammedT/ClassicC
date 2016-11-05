@@ -58,5 +58,10 @@ int main(){
 	printf("Size of float using sizeof operator %lu byte\n",sizeof(float));
 	printf("Size of double using sizeof operator %lu byte\n",sizeof(double));
 
+	int array[] = {0,1,2,3,4,5,6,7,8,9};
+	printf("Size of array[] using sizeof operator %lu byte\n",sizeof(array));
+	printf("Size of array[0] using sizeof operator %lu byte\n",sizeof(array[0]));
+	printf("Length of the array calculated using sizeof operator - %lu\n", sizeof(array) / sizeof(array[0]));
+
 	return 0;
 }
