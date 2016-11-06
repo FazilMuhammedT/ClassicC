@@ -33,6 +33,18 @@ void reverse(int a[], int n){
 	}
 }
 
+/**
+ * Maximum of the numbers in an array
+**/
+int max_array (int a[], int n) {
+	int maxVal;
+	if (n == 0) return -99999; //some large -ve number
+	if (n == 1) return a[0]; //1 element array
+	//if n >= 2, find the largest element in the array
+	maxVal = max_array( a+1, n-1);
+	return (a[0] > maxVal) ? a[0] : maxVal;
+}
+
 int main(){
 	int array[] = {5, 4, 3, 2, 1};
 	int evenArray[] = {2, 4, 6, 8, 10, 12};
@@ -54,6 +66,8 @@ int main(){
 	for(int i = 0; i < 6; i++ )
 		printf("%d ",evenArray[i]);
 	printf("\n");
+
+	printf("Maximum value in the even array -> %d\n",max_array(evenArray,6));
 
 	return 0;
 }
