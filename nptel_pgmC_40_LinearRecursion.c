@@ -34,7 +34,8 @@ void reverse(int a[], int n){
 }
 
 /**
- * Maximum of the numbers in an array
+ * Maximum of the numbers in an array using linear recursion
+ * Stack depth is this case is n
 **/
 int max_array (int a[], int n) {
 	int maxVal;
@@ -43,6 +44,23 @@ int max_array (int a[], int n) {
 	//if n >= 2, find the largest element in the array
 	maxVal = max_array( a+1, n-1);
 	return (a[0] > maxVal) ? a[0] : maxVal;
+}
+
+//Method to find maximum of two numbers
+int max_Value( int a, int b){
+	return ( a > b ) ? a : b;
+}
+
+/**
+ * Maximum of the numbers in an array using two way recursion
+ * Stack depth in this case is log n
+**/
+int max_array_twowayrecursion (int a[], int n) {
+	int maxVal;
+	if (n == 0) return -99999; //some large -ve number
+	if (n == 1) return a[0]; //1 element array
+	//if n >= 2, find the largest element in the array
+	return max_Value ( max_array_twowayrecursion(a, n/2), max_array_twowayrecursion( a + n/2, n - n/2));
 }
 
 int main(){
@@ -68,6 +86,7 @@ int main(){
 	printf("\n");
 
 	printf("Maximum value in the even array -> %d\n",max_array(evenArray,6));
+	printf("Maximum value in the even array using recursion method -> %d\n",max_array_twowayrecursion(evenArray,6));
 
 	return 0;
 }
